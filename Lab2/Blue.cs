@@ -164,26 +164,27 @@ namespace Lab2
             {
                 double x2 = x * x;
 
-                double term = 1.0; 
+                // Численное суммирование ряда
+                double term = 1.0;
                 double s = term;
                 int i = 0;
-                while (true)
+                
+                // Суммируем пока член >= 0.0001
+                while (Math.Abs(term) >= 0.0001)
                 {
-                    term = term * (2.0 * i + 3) * x2 / ((i + 1) * (2.0 * i + 1));
-                    if (Math.Abs(term) < 0.0001) break; 
-                    s += term;
                     i++;
+                    term = term * (2.0 * i + 1) * x2 / (i * (2.0 * i - 1));
+                    s += term;
                 }
-                SS += Math.Round(s, 5);
+                
+                SS += s;
 
+                // Аналитическая функция
                 double y = (1 + 2 * x2) * Math.Exp(x2);
                 SY += y;
 
                 x += h;
-            }   
-
-            SS = Math.Round(SS, 5);
-            SY = Math.Round(SY, 5);
+            }
             // end 
             return (SS, SY);
         }
