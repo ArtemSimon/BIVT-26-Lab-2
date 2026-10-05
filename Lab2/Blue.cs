@@ -174,7 +174,7 @@ namespace Lab2
                     s += term;
                     i++;
                 }
-                SS += Math.Round(s, 4);
+                SS += Math.Round(s, 5);
 
                 double y = (1 + 2 * x2) * Math.Exp(x2);
                 SY += y;
@@ -182,8 +182,8 @@ namespace Lab2
                 x += h;
             }   
 
-            SS = Math.Round(SS, 4);
-            SY = Math.Round(SY, 4);
+            SS = Math.Round(SS, 5);
+            SY = Math.Round(SY, 5);
             // end 
             return (SS, SY);
         }
