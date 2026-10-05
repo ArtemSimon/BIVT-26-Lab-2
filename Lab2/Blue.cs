@@ -129,27 +129,27 @@ namespace Lab2
             for (int day = 1; day <= 7; day++)
             {
                 a += dailyNorm;
-                dailyNorm += dailyNorm * l / 100.0; 
+                dailyNorm += dailyNorm * I / 100.0; 
             }
             answer = a;
 
             
             double totalDistance = 0;
-            double dailyNorm = S;
+            double currentNorm = S;
             while (totalDistance < 100)
             {
-                totalDistance += dailyNorm;
+                totalDistance += currentNorm;
                 b++;
-                dailyNorm += dailyNorm * l / 100.0;
+                currentNorm += currentNorm * I / 100.0;
             }
             answer = b;
 
 
 
-            double dailyNorm = S;
-            while (dailyNorm <= 42)
+            double currentDay = S;
+            while (currentDay <= 42)
             {
-                dailyNorm += dailyNorm * l / 100.0;
+                currentDay += currentDay * I / 100.0;
                 c++;
             }
             answer = c;
