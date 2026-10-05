@@ -131,9 +131,7 @@ namespace Lab2
                 a += dailyNorm;
                 dailyNorm += dailyNorm * I / 100.0; 
             }
-            answer = a;
 
-            
             double totalDistance = 0;
             double currentNorm = S;
             while (totalDistance < 100)
@@ -142,7 +140,6 @@ namespace Lab2
                 b++;
                 currentNorm += currentNorm * I / 100.0;
             }
-            answer = b;
 
 
 
@@ -152,7 +149,6 @@ namespace Lab2
                 currentDay += currentDay * I / 100.0;
                 c++;
             }
-            answer = c;
             // end
 
             return (a, b, c);
