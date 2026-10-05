@@ -122,7 +122,7 @@ namespace Lab2
         {
             double a = 0;
             int b = 0;
-            int c = 1;
+            int c = 0;
 
             // code here
             double dailyNorm = S;
@@ -174,7 +174,7 @@ namespace Lab2
                     s += term;
                     i++;
                 }
-                SS += s;
+                SS += Math.Round(s, 5);
 
                 double y = (1 + 2 * x2) * Math.Exp(x2);
                 SY += y;
